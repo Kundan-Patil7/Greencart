@@ -38,16 +38,3 @@ A full-stack grocery delivery web application built using **MongoDB**, **Express
 
 ### Payment Integration
 - **Stripe API**
-
-## Installation 🖥️
-
-### Prerequisites
-Ensure you have the following installed:
-- Node.js
-- MongoDB
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Kundan-Patil7/QuickBasket.git
-   cd quick-basket
