@@ -23,7 +23,7 @@ export const addProduct = async (req, res) => {
       images.map(async (item) => {
         try {
           const result = await imagekit.upload({
-            file: item.path, // Path to the image file
+            file: item.path,
             fileName: item.originalname, // Original name of the file
             folder: "products", // Folder in ImageKit
           });

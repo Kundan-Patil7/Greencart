@@ -5,7 +5,6 @@ import connectDB from "./configs/db.js";
 import dotenv from "dotenv";
 import userRouter from "./routes/userRoute.js";
 import sellerRouter from "./routes/sellerRoute.js";
-
 import productRouter from "./routes/productRoute.js";
 import cartRouter from "./routes/cartRoute.js";
 import addressRouter from "./routes/addressRoute.js";
@@ -32,7 +31,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: allowedOrigins,
-    credentials: true, // 
+    credentials: true, 
   })
 );
 // Api Routes

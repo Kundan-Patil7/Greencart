@@ -9,8 +9,8 @@ const SellerLogin = () => {
 
   const onSubmitHandler = async (event) => {
     try {
-      event.preventDefault(); // Prevent default form submission
-      const { data } = await axios.post("/api/seller/login", { email, password }); // Send login request
+      event.preventDefault(); 
+      const { data } = await axios.post("/api/seller/login", { email, password }); 
       if (data.success) {
         setIsSeller(true); 
         navigate("/seller"); 

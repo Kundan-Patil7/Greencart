@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     cartItems: { type: Object, default: {} },
   },
-  { minimize: false } // Prevent Mongoose from removing empty objects
+  { minimize: false }
 );
 
 // Check if the model exists before defining it

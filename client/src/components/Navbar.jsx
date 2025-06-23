@@ -3,16 +3,29 @@ import { NavLink } from "react-router-dom";
 import { navbar } from '../assets/navbar/navbar.js'
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import { useAppContext } from "../context/AppContext";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false)
-    const { user, setUser, showUserLogin, setShowUserLogin, navigate, searchQuery, setSearchQuery, getCartCount } = useAppContext();
+    const { axios, user, setUser, showUserLogin, setShowUserLogin, navigate, searchQuery, setSearchQuery, getCartCount } = useAppContext();
 
 
 
     const logout = async () => {
-        setUser(null);
-        navigate('/')
+
+        try {
+            const { data } = await axios.get('/api/user/logout')
+            if (data.success) {
+                toast.success(data.message)
+                setUser(null);✔️
+                navigate('/')
+            } else {
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
+
     }
 
     useEffect(() => {
@@ -43,11 +56,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Cart Button */}
-                <div   onClick={() => navigate("/cart")} className="relative cursor-pointer">
+                <div onClick={() => navigate("/cart")} className="relative cursor-pointer">
                     <ShoppingCart
                         className="h-5 opacity-80" />
                     <button
-                       
+
                         className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                 </div>
 
