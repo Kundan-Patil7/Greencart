@@ -1,4 +1,4 @@
-# Quick Basket 🛒
+#  Full Stack Grocery Delivery Ecommerce 🛒
 
 A full-stack grocery delivery web application built using **MongoDB**, **Express**, **React**, and **Node.js**. Quick Basket enables users to browse grocery items, place orders online, and make secure payments via Stripe. It also includes an admin panel for sellers to manage products seamlessly. Product images are uploaded and stored in **Cloudinary**.
 
