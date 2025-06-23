@@ -17,8 +17,6 @@ A full-stack grocery delivery web application built using **MongoDB**, **Express
   - RESTful APIs for handling products, users, and orders.
   - Database management with **MongoDB**.
 
-- **Deployment**:
-  - Live deployment on **Vercel**.
 
 ## Tech Stack 🛠️
 
@@ -36,5 +34,4 @@ A full-stack grocery delivery web application built using **MongoDB**, **Express
 ### File Storage
 - **Cloudinary** (for product images)
 
-### Payment Integration
-- **Stripe API**
+
